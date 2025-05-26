@@ -2,16 +2,17 @@ from flask import Flask, jsonify, request
 import fastf1 as ff1
 import pandas as pd
 import numpy as np
-import os
+# import os
 from flask_cors import CORS
 
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "https://furious-error.github.io"}})
+# CORS(app)
 
-CACHE_DIR = 'fastf1_cache'
-if not os.path.exists(CACHE_DIR):
-    os.makedirs(CACHE_DIR)
-ff1.Cache.enable_cache(CACHE_DIR)
+# CACHE_DIR = 'fastf1_cache'
+# if not os.path.exists(CACHE_DIR):
+#     os.makedirs(CACHE_DIR)
+# ff1.Cache.enable_cache(CACHE_DIR)
 
 def serialize_df_rows(df):
     """
