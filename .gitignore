@@ -1,3 +1,5 @@
 venv/
 fastf1_cache/
 api_endpoints.ipynb
+.vscode
+__pycache__
