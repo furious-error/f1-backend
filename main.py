@@ -6,7 +6,10 @@ import numpy as np
 from flask_cors import CORS
 
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "https://furious-error.github.io"}})
+CORS(app, origins=[
+    "https://furious-error.github.io", 
+    # "http://localhost:5173",
+])
 # CORS(app)
 
 # CACHE_DIR = 'fastf1_cache'
